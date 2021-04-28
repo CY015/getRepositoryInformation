@@ -105,13 +105,13 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 * 输入：`csvPath`：存储着所有仓库信息的csv文件路径
 
 ## Python环境配置
-Python3
-pandas
-requests
-json
+Python3  
+pandas  
+requests  
+json  
 jsonlines
 
 ### json.gz文件下载
-Linux 
+Linux  
 Mac OS
 Windows的`wget`命令暂时没用过
