@@ -111,10 +111,13 @@ requests
 json  
 jsonlines
 
-### json.gz文件下载
+## json.gz文件
+### 下载
 Linux  
 Mac OS  
 Windows的`wget`命令暂时没用过
+### 处理
+* 在Python环境下无需解压gz文件，Python自带的`gzip`包可完成对gz文件的读取
 
 ## TODO
 * 可以考虑多线程(使用多个token验证?)
