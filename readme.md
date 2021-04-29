@@ -121,7 +121,7 @@ Windows的`wget`命令暂时没用过
 
 ## TODO
 * 可以考虑多线程(使用多个token验证?)
-* 但Github API在一小时内有访问次数[限制](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)(会限制每个IP访问次数上限是5000次/h)，可以考虑多个IP地址进行API的访问
+* 但Github API在每个小时内有访问次数[限制](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)(会限制每个IP访问次数上限是5000次/h)，可以考虑多个IP地址进行API的访问
 ```json
 {"message":"API rate limit exceeded for 116.22.142.244. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
 ```
