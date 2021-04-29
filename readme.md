@@ -11,7 +11,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 ### getRepoURL()
 * 获取仓库api并进行解析
 
-1. 仓库api地址: json文件里键`"repo"`下的`"url"`键值
+1. 仓库api地址: json文件里键`"repo"`下的`"url"`键值  
    1.1 单条json示例：
 ```json
 {
@@ -36,7 +36,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
     }
 }
 ```
-2. 用`requests`模块模拟访问仓库api地址
+2. 用`requests`模块模拟访问仓库api地址  
    2.1 返回信息示例：
 ```json
 {
@@ -67,7 +67,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 }
 ```
 
-3. 获取仓库相关信息
+3. 获取仓库相关信息  
    1. 目前只提取了：
    `"html_url"` 仓库地址  
    `"language"` 主要使用语言(如果有多种语言的情况下，这里只显示使用占比最大的一种语言)  
