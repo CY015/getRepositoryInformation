@@ -69,11 +69,11 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 
 3. 获取仓库相关信息  
    1. 目前只提取了：  
-   `"html_url"` 仓库地址  
-   `"language"` 主要使用语言(如果有多种语言的情况下，这里只显示使用占比最大的一种语言)  
-   `"stargazers_count"` stars数量  
-   `"watchers_count"` watch数量  
-   `"forks_count"` forks数量  
+   `"html_url"` 仓库地址
+   `"language"` 主要使用语言(如果有多种语言的情况下，这里只显示使用占比最大的一种语言)
+   `"stargazers_count"` stars数量
+   `"watchers_count"` watch数量
+   `"forks_count"` forks数量
 
    *按需索取，获取对应的键值即可*
 
@@ -115,3 +115,10 @@ jsonlines
 Linux  
 Mac OS  
 Windows的`wget`命令暂时没用过
+
+## TODO
+* 可以考虑多线程(使用多个token验证?)
+* 但Github API在一小时内有访问次数[限制](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)(会限制每个IP访问次数上限是5000次/h)，可以考虑多个IP地址进行API的访问
+```json
+{"message":"API rate limit exceeded for 116.22.142.244. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+```
