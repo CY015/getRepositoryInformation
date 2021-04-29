@@ -69,11 +69,11 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 
 3. 获取仓库相关信息  
    1. 目前只提取了：  
-   `"html_url"` 仓库地址
-   `"language"` 主要使用语言(如果有多种语言的情况下，这里只显示使用占比最大的一种语言)
-   `"stargazers_count"` stars数量
-   `"watchers_count"` watch数量
-   `"forks_count"` forks数量
+   `"html_url"` 仓库地址  
+   `"language"` 主要使用语言(如果有多种语言的情况下，这里只显示使用占比最大的一种语言)  
+   `"stargazers_count"` stars数量  
+   `"watchers_count"` watch数量  
+   `"forks_count"` forks数量  
 
    *按需索取，获取对应的键值即可*
 
