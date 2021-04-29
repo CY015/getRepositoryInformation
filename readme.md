@@ -68,7 +68,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 ```
 
 3. 获取仓库相关信息  
-   1. 目前只提取了：
+   1. 目前只提取了：  
    `"html_url"` 仓库地址  
    `"language"` 主要使用语言(如果有多种语言的情况下，这里只显示使用占比最大的一种语言)  
    `"stargazers_count"` stars数量  
@@ -87,7 +87,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 ### removeDuplication(rawData)
 * 删除一个文件内的重复仓库信息
 * 输入：`rawData`: `getRepoURL`中存储仓库信息的List
-* 输出：不含重复仓库信息的List
+* 输出：不含重复仓库信息的List  
 **只保证单个json.gz文件生成的仓库信息数据内信息不重复**
 
 ### filtration(csvFile, rFilter)
