@@ -13,61 +13,61 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 
 1. 仓库api地址: json文件里键`"repo"`下的`"url"`键值  
    <details>
-   <summary>单条json示例</summary>
+   <summary>单条json示例</summary>  
     ```json
     {
-    "id": "15847076753",
-    "type": "CreateEvent",
-    "actor": {
-        "id": 483114,
-        ...
-    },
-    "repo": {
-        "id": 95529911,
-        "name": "ow2-proactive/proactive-examples",
-        "url": "https://api.github.com/repos/ow2-proactive/proactive-examples"
-    },
-    "payload": {
-        ...
-    },
-    "public": true,
-    "created_at": "2021-04-07T13:00:00Z",
-    "org": {    
-        ...
-    }
+      "id": "15847076753",
+      "type": "CreateEvent",
+      "actor": {
+          "id": 483114,
+          ...
+      },
+      "repo": {
+          "id": 95529911,
+          "name": "ow2-proactive/proactive-examples",
+          "url": "https://api.github.com/repos/ow2-proactive/proactive-examples"
+      },
+      "payload": {
+          ...
+      },
+      "public": true,
+      "created_at": "2021-04-07T13:00:00Z",
+      "org": {    
+          ...
+      }
     }
     ```
     </details>
 
 2. 用`requests`模块模拟访问仓库api地址  
    <details>
-   <summary>响应信息示例</summary>
+   <summary>响应信息示例</summary>  
     ```json
     {
-    "id": 95529911,
-    "node_id": "MDEwOlJlcG9zaXRvcnk5NTUyOTkxMQ==",
-    "name": "proactive-examples",
-    "full_name": "ow2-proactive/proactive-examples",
-    "private": false,
-    "owner": {
-      "login": "ow2-proactive",
-      ...
-    },
-    "html_url": "https://github.com/ow2-proactive/proactive-examples",
-    "description": "This repository centralizes all the proactive objects (workflows, rules,..)",
-    "fork": false,
-      ...
-    "stargazers_count": 6,
-    "watchers_count": 6,
-    "language": "Python",
-      ...
-    "forks_count": 29,
-      ...
-    "organization": {
-      ...
-    },
-    "network_count": 29,
-    "subscribers_count": 16
+      "id": 95529911,
+      "node_id": "MDEwOlJlcG9zaXRvcnk5NTUyOTkxMQ==",
+      "name": "proactive-examples",
+      "full_name": "ow2-proactive/proactive-examples",
+      "private": false,
+      "owner": {
+        "login": "ow2-proactive",
+        ...
+      },
+      "html_url": "https://github.com/ow2-proactive/proactive-examples",
+      "description": "This repository centralizes all the proactive objects (workflows, rules,..)",
+      "fork": false,
+        ...
+      "stargazers_count": 6,
+      "watchers_count": 6,
+      "language": "Python",
+        ...
+      "forks_count": 29,
+        ...
+      "organization": {
+        ...
+      },
+      "network_count": 29,
+      "subscribers_count": 16
     }
     ```
   </details>
