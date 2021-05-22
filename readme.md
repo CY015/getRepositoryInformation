@@ -14,6 +14,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 1. 仓库api地址: json文件里键`"repo"`下的`"url"`键值  
    <details>
    <summary>单条json示例</summary>  
+   
     ```json
     {
       "id": "15847076753",
@@ -37,11 +38,13 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
       }
     }
     ```
+   
     </details>
 
 2. 用`requests`模块模拟访问仓库api地址  
    <details>
    <summary>响应信息示例</summary>  
+   
     ```json
     {
       "id": 95529911,
@@ -70,6 +73,7 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
       "subscribers_count": 16
     }
     ```
+   
   </details>
 
 3. 获取仓库相关信息  
