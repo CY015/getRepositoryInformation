@@ -12,9 +12,10 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
 * 获取仓库api并进行解析
 
 1. 仓库api地址: json文件里键`"repo"`下的`"url"`键值  
-   1.1 单条json示例：
-```json
-{
+   <details>
+   <summary>单条json示例</summary>
+    ```json
+    {
     "id": "15847076753",
     "type": "CreateEvent",
     "actor": {
@@ -34,38 +35,42 @@ wget https://data.gharchive.org/YYYY-MM-DD-HH.json.gz
     "org": {    
         ...
     }
-}
-```
+    }
+    ```
+    </details>
+
 2. 用`requests`模块模拟访问仓库api地址  
-   2.1 返回信息示例：
-```json
-{
-  "id": 95529911,
-  "node_id": "MDEwOlJlcG9zaXRvcnk5NTUyOTkxMQ==",
-  "name": "proactive-examples",
-  "full_name": "ow2-proactive/proactive-examples",
-  "private": false,
-  "owner": {
-    "login": "ow2-proactive",
-    ...
-  },
-  "html_url": "https://github.com/ow2-proactive/proactive-examples",
-  "description": "This repository centralizes all the proactive objects (workflows, rules,..)",
-  "fork": false,
-    ...
-  "stargazers_count": 6,
-  "watchers_count": 6,
-  "language": "Python",
-    ...
-  "forks_count": 29,
-    ...
-  "organization": {
-    ...
-  },
-  "network_count": 29,
-  "subscribers_count": 16
-}
-```
+   <details>
+   <summary>响应信息示例</summary>
+    ```json
+    {
+    "id": 95529911,
+    "node_id": "MDEwOlJlcG9zaXRvcnk5NTUyOTkxMQ==",
+    "name": "proactive-examples",
+    "full_name": "ow2-proactive/proactive-examples",
+    "private": false,
+    "owner": {
+      "login": "ow2-proactive",
+      ...
+    },
+    "html_url": "https://github.com/ow2-proactive/proactive-examples",
+    "description": "This repository centralizes all the proactive objects (workflows, rules,..)",
+    "fork": false,
+      ...
+    "stargazers_count": 6,
+    "watchers_count": 6,
+    "language": "Python",
+      ...
+    "forks_count": 29,
+      ...
+    "organization": {
+      ...
+    },
+    "network_count": 29,
+    "subscribers_count": 16
+    }
+    ```
+  </details>
 
 3. 获取仓库相关信息  
    1. 目前只提取了：  
@@ -123,5 +128,8 @@ Windows的`wget`命令暂时没用过
 * 可以考虑多线程(使用多个token验证?)
 * 但Github API在每个小时内有访问次数[限制](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)(会限制每个IP访问次数上限是5000次/h)，可以考虑多个IP地址进行API的访问
 ```json
-{"message":"API rate limit exceeded for 116.22.142.244. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}
+{
+  "message":"API rate limit exceeded for 116.22.142.244. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",  
+  "documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"
+}
 ```
